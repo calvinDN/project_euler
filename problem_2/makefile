@@ -5,13 +5,12 @@ CC = gcc
 CFLAGS = -Wall -ansi -pedantic
 
 all: solution
-	./solution
 
 solution: solution.c
-	gcc $(CFLAGS) -o $@ solution.c
+	$(CC) $(CFLAGS) -o ./bin/solution solution.c
 
-run: solution
-	./solution
+run: all
+	./bin/solution
 
 clean:
-	rm -f solution
+	rm -f ./bin/solution
