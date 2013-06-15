@@ -8,9 +8,9 @@ all: solution
 	./solution
 
 solution: solution.c
-	$(CC) $(CFLAGS) -o solution solution.c
+	gcc $(CFLAGS) -o $@ solution.c
 
-run: all
+run: solution
 	./solution
 
 clean:
